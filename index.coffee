@@ -76,7 +76,8 @@ stylus = (options = {}, cb = ->) ->
 
     httpUrl = (options.httpPath || options.path) + "/" + sprite.filename()
 
-    new nodes.Property ["background"], "url('#{httpUrl}') #{positionX}px #{positionY}px"
+    #new nodes.Property ["background"], "url('#{httpUrl}') #{positionX}px #{positionY}px"
+    new nodes.Property ["background-position"], "#{positionX}px #{positionY}px"
 
   helper.dimensionsFn = (name, image) ->
     name = name.string

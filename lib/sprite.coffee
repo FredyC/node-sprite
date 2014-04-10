@@ -36,7 +36,7 @@ class Sprite extends EventEmitter
     "#{@path}/#{@name}.json"
 
   filename: ->
-    "#{@name}-#{@shortsum()}.png"
+    "#{@name}.png"
 
   write: (cb) ->
     fs.exists @url(), (exists) =>
